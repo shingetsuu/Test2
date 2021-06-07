@@ -1,0 +1,5 @@
+Запуск консольных команд через run.php
+
+Список доступных команд: php run.php list
+
+php run.php actualize

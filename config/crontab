@@ -1,0 +1,22 @@
+ROOT=/home/scooper/process-automation
+
+0 * * * *   $ROOT/run actualize > $ROOT/runtime/logs/last_actualize.log
+
+# 10,40 * * * *  $ROOT/run integrate site next > $ROOT/runtime/logs/last_integrate_site_next.log
+# 15,45 * * * *  $ROOT/run integrate spp-admin next > $ROOT/runtime/logs/last_integrate_spp_admin_next.log
+# 20 * * * *  $ROOT/run integrate merchant-api next > $ROOT/runtime/logs/last_integrate_merchant_api_next.log
+# 25 * * * *  $ROOT/run integrate retail-tools next > $ROOT/runtime/logs/last_integrate_retail_tools_next.log
+
+50 0 * * *  $ROOT/run delete-merged-branches -f all >> $ROOT/runtime/logs/delete_merged_branches.log
+
+*/10 * * * *  $ROOT/run release-qa site > $ROOT/runtime/logs/last_release_qa_site.log
+32 * * * *  $ROOT/run release-qa spp-admin > $ROOT/runtime/logs/last_release_qa_spp_admin.log
+34 * * * *  $ROOT/run release-qa retail-tools > $ROOT/runtime/logs/last_release_qa_retail_tools.log
+36 * * * *  $ROOT/run release-qa merchant-api > $ROOT/runtime/logs/last_release_qa_merchant_api.log
+38 * * * *  $ROOT/run release-qa pickup-service > $ROOT/runtime/logs/last_release_qa_pickup_service.log
+
+55 * * * *  $ROOT/run test >> $ROOT/runtime/logs/test.log
+
+3,18,33,48 * * * * $ROOT/run sync-code-reviews > $ROOT/runtime/logs/last_sync_code_reviews.log
+
+58 23 * * *  $ROOT/run stat >> $ROOT/runtime/stat.csv

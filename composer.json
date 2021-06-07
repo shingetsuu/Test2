@@ -1,0 +1,29 @@
+{
+    "name"         : "c2m/process-automation",
+    "authors"      : [
+        {
+            "name"  : "Vsevolod Ivanov",
+            "email" : "vsevolod.ivanov@click2mice.com",
+            "role"  : "Developer"
+        }
+    ],
+    "autoload" : {
+        "psr-0" : {
+            "Click2mice" : "src/"
+        }
+    },
+    "require"      : {
+        "php": ">=5.4.0",
+        "symfony/console" : "2.3.*",
+        "swiftmailer/swiftmailer" : ">=5.0",
+        "kbjr/git.php": "0.1.4.9",
+        "maknz/slack": "^1.7"
+    },
+    "require-dev" : {
+        "phpunit/phpunit":"3.7.*"
+    },
+    "config"       : {
+	"secure-http" : false,
+        "vendor-dir" : "vendor"
+    }
+}

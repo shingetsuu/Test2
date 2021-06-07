@@ -305,7 +305,7 @@
             "version": "0.1.4.9",
             "source": {
                 "type": "git",
-                "url": "https://github.com/together-networks/Git.php.git",
+                "url": "https://github.com/kbjr/Git.php",
                 "reference": "6654f170d00c5febd108b7e36ce3ccc583a6e406"
             },
             "dist": {

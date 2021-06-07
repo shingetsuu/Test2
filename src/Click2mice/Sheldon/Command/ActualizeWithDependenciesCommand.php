@@ -67,7 +67,7 @@ class ActualizeWithDependenciesCommand extends ProcessCommand
                 $this->waitAndLockComponent($component, $output);
             }
             $output->write(
-                'Получение тикетов компонента <comment>' . $component . '</comment> в статусе "Ready for testing"... '
+                'Получение тикетов компонента <comment>' . $component . '</comment> в статусе "Ready for testing.php"... '
             );
             // подготовка временного клона репозитория
             $repoUrl = $componentParams['repo_url'];

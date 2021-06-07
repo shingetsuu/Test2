@@ -25,8 +25,8 @@ class StatCommand extends ProcessCommand
             'support_backlog' => "assignee = 'support.backlog' AND project = '$project'",
             'qa_backlog' => "assignee = 'qa.backlog' AND project = '$project'",
             'qa_verification' => "status IN ('Verification') AND project = '$project'",
-            'qa_ready_for_testing' => "status IN ('Ready for testing', 'In testing') AND project = '$project' AND " . $this->config['jira.jql.qa_engineer'] . " IN ('maksim.senchuk','evgeniya.baslovyak','igor.korolev','stanislav.trubachev','anton.ohontsev','dmitriy.kulgavyiy','evgeniy.ivonin') AND issuetype in ('Development task', 'Bug report')",
-            'dev_ready_for_testing' => "status IN ('Ready for testing', 'In testing') AND project = '$project' AND " . $this->config['jira.jql.qa_engineer'] . " NOT IN ('maksim.senchuk','evgeniya.baslovyak','igor.korolev','stanislav.trubachev','anton.ohontsev','dmitriy.kulgavyiy','evgeniy.ivonin') AND issuetype in ('Development task', 'Bug report')",
+            'qa_ready_for_testing' => "status IN ('Ready for testing.php', 'In testing.php') AND project = '$project' AND " . $this->config['jira.jql.qa_engineer'] . " IN ('maksim.senchuk','evgeniya.baslovyak','igor.korolev','stanislav.trubachev','anton.ohontsev','dmitriy.kulgavyiy','evgeniy.ivonin') AND issuetype in ('Development task', 'Bug report')",
+            'dev_ready_for_testing' => "status IN ('Ready for testing.php', 'In testing.php') AND project = '$project' AND " . $this->config['jira.jql.qa_engineer'] . " NOT IN ('maksim.senchuk','evgeniya.baslovyak','igor.korolev','stanislav.trubachev','anton.ohontsev','dmitriy.kulgavyiy','evgeniy.ivonin') AND issuetype in ('Development task', 'Bug report')",
             'total_unresolved' => 'project = "' . $project .'" AND resolution = Unresolved AND issuetype in ("Development task", "Bug report", Research, "Markup task")',
             'total_resolved' => 'project = "' . $project .'" AND resolution != Unresolved AND issuetype in ("Development task", "Bug report", Research, "Markup task")',
         );

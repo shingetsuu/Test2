@@ -68,12 +68,12 @@ $config = [
         ],
         'ActualizeWithDependencies'     => [
             'WD.issuetypes'         => ['Development task', 'Bug report'],
-            'WD.statuses'           => ['Ready for testing'],
-            'WD.allowed_statuses'   => ['Integrated to RC', 'Ready for RC', 'Ready for testing', 'In testing', 'Planned to testing'],
+            'WD.statuses'           => ['Ready for testing.php'],
+            'WD.allowed_statuses'   => ['Integrated to RC', 'Ready for RC', 'Ready for testing.php', 'In testing.php', 'Planned to testing.php'],
 
             'WDB.issuetypes'        => ['Development task', 'Bug report'],
-            'WDB.statuses'          => ['Ready for testing'],
-            'WDB.allowed_statuses'  => ['Integrated to RC', 'Ready for RC', 'Ready for testing', 'In testing', 'Planned to testing'],
+            'WDB.statuses'          => ['Ready for testing.php'],
+            'WDB.allowed_statuses'  => ['Integrated to RC', 'Ready for RC', 'Ready for testing.php', 'In testing.php', 'Planned to testing.php'],
         ],
         'Build'                         => [
             'WD.statuses'           => ['Integrated to RC'],
@@ -91,14 +91,14 @@ $config = [
             'WDB.trans_name'        => 'Remove from RC',
         ],
         'Integrate'                     => [
-            'WD.preview_statuses'   => ['Ready for testing', 'In testing', 'Reopened', 'Ready for RC', 'Integrated to RC', 'Released'],
+            'WD.preview_statuses'   => ['Ready for testing.php', 'In testing.php', 'Reopened', 'Ready for RC', 'Integrated to RC', 'Released'],
             'WD.statuses'           => ['Ready for RC'],
             'WD.filter_statuses'    => ['Released', 'Integrated to RC'],
             'WD.selection_statuses' => ['Ready for RC'],
             'WD.check_statuses'     => ['Ready for RC', 'Integrated to RC', 'Released'],
             'WD.trans_name'         => 'Integrate to RC',
 
-            'WDB.preview_statuses'  => ['Ready for testing', 'In testing', 'Reopened', 'Ready for RC', 'Integrated to RC', 'Released'],
+            'WDB.preview_statuses'  => ['Ready for testing.php', 'In testing.php', 'Reopened', 'Ready for RC', 'Integrated to RC', 'Released'],
             'WDB.statuses'          => ['Ready for RC'],
             'WDB.filter_statuses'   => ['Released', 'Integrated to RC'],
             'WDB.selection_statuses'=> ['Ready for RC'],
@@ -118,10 +118,10 @@ $config = [
             'WDB.statuses'          => ['Integrated to RC'],
         ],
         'Process'                       => [
-            'WD.status'             => 'Ready for testing',
+            'WD.status'             => 'Ready for testing.php',
             'WD.trans_name'         => 'Need actualization',
 
-            'WDB.status'            => 'Ready for testing',
+            'WDB.status'            => 'Ready for testing.php',
             'WDB.trans_name'        => 'Need actualization',
         ],
         'Release'                       => [
@@ -146,22 +146,22 @@ $config = [
         ],
         'Test'                          => [
             'WD.issuetypes'         => ['Development task', 'Bug report'],
-            'WD.statuses'           => ['Ready for testing'],
-            'WD.test_trans_name'    => 'Start testing',
-            'WD.complete_trans_name'=> 'Complete testing (auto)',
+            'WD.statuses'           => ['Ready for testing.php'],
+            'WD.test_trans_name'    => 'Start testing.php',
+            'WD.complete_trans_name'=> 'Complete testing.php (auto)',
             'WD.err_trans_name'     => 'Reopen (auto)',
 
             'WDB.issuetypes'         => ['Development task', 'Bug report'],
-            'WDB.statuses'           => ['Ready for testing'],
-            'WDB.test_trans_name'    => 'Start testing',
-            'WDB.complete_trans_name'=> 'Complete testing (auto)',
+            'WDB.statuses'           => ['Ready for testing.php'],
+            'WDB.test_trans_name'    => 'Start testing.php',
+            'WDB.complete_trans_name'=> 'Complete testing.php (auto)',
             'WDB.err_trans_name'     => 'Reopen (auto)',
         ],
     ],
     'components.lock_dir'                       => 'runtime/components.lock',
     'components' => [
         'site'                           => [
-            'repo_url'        => 'https://github.com/Vortex-V/Yii2',
+            'repo_url'        => 'https://github.com/Vortex-V/Test.git',
             'version_mask'    => 'site-%VERSION%',
 //            'phpunit_command' => 'php -d error_reporting=0 data/vendor/bin/phpunit -c data/test/phpunit.xml',
             'phpunit_command' => 'php -d error_reporting=0 data/vendor/bin/phpunit -c data/test/phpunit.xml',

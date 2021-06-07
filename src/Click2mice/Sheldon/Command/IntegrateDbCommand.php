@@ -211,7 +211,7 @@ class IntegrateDbCommand extends ProcessCommand
         $jql = "fixVersion = '$versionName' AND project = '$project'";
         $status = array('Ready for RC');
         if ($dryRun) {
-            $status[] = 'Ready for testing';
+            $status[] = 'Ready for testing.php';
         }
 
         $jql .= " AND status IN ('" . implode("','", $status) . "')";

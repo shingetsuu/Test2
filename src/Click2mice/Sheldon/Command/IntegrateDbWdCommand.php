@@ -204,7 +204,7 @@ class IntegrateDbWdCommand extends ProcessCommand
         $jql = "fixVersion = '$versionName' AND project = '$project' AND component = 'db-wm2'";
         $status = array('Ready for RC');
         if ($dryRun) {
-            $status[] = 'Ready for testing';
+            $status[] = 'Ready for testing.php';
         }
 
         $jql .= " AND status IN ('" . implode("','", $status) . "')";

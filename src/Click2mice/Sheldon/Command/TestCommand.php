@@ -30,7 +30,7 @@ class TestCommand extends ProcessCommand
                 if (!$this->lockComponent($component)) {
                     $this->waitAndLockComponent($component, $output);
                 }
-                $output->write( 'Получение тикетов компонента <comment>' . $component . '</comment> в статусе "Ready for testing" and QA Engineer... ' );
+                $output->write( 'Получение тикетов компонента <comment>' . $component . '</comment> в статусе "Ready for testing.php" and QA Engineer... ' );
 
                 $jql = "issuetype IN ('"
                     . implode("', '", $this->config['commands.options']['Test'][$project . ".issuetypes"]) .

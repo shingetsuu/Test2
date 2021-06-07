@@ -110,7 +110,7 @@ class CheckRegressIssues extends ProcessCommand
 
     protected function findIssuesRFT()
     {
-        $jql = '"Phase of detection"="Regression Test" AND status IN ("Ready for testing")';
+        $jql = '"Phase of detection"="Regression Test" AND status IN ("Ready for testing.php")';
         return $this->getJiraClient()->getIssuesByJql($jql);
     }
 }

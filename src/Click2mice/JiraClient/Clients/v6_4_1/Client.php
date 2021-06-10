@@ -69,6 +69,7 @@ class Client extends \Click2mice\JiraClient\Clients\v6_3_8\Client
      * Возвращает данные тикета
      * @param $issueKey
      * @return bool|mixed
+     * aoaoaoo
      */
     public function getIssue($issueKey)
     {

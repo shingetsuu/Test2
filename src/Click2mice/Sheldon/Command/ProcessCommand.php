@@ -266,7 +266,7 @@ abstract class ProcessCommand extends Command
         $issueData = $this->getJiraClient()->getIssue( $issueKey );
         return isset($issueData['fields'][$this->config['jira.fields.git_branch']])
             ? $issueData['fields'][$this->config['jira.fields.git_branch']]
-            : (strripos($issueKey, 'WDB') !== false ? 'master' : '');
+            : (strripos($issueKey, 'SI') !== false ? 'master' : '');
     }
 
     /**

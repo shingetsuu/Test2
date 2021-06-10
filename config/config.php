@@ -48,8 +48,8 @@ $config = [
         'Actualize'                     => [
             'CM.issuetypes'         => ['Development task', 'Bug',"Task"],
             'CM.statuses'           => ["Ready for Release", "Ready for Testing", "Need CodeReview", "In Testing", "Planned to Testing", "Reopened"],
-            'SI.issuetypes'         => ['Development task', 'Bug', "Task"],
-            'SI.statuses'           => ["Done"],
+            'SI.issuetypes'         => ["Bug"],
+            'SI.statuses'           => ["To Do"],
         ],
         'ActualizeQa'                   => [
             'WD.link_type'          => 'Release link',

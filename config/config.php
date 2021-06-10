@@ -48,8 +48,6 @@ $config = [
         'Actualize'                     => [
             'CM.issuetypes'         => ['Development task', 'Bug',"Task"],
             'CM.statuses'           => ["Ready for Release", "Ready for Testing", "Need CodeReview", "In Testing", "Planned to Testing", "Reopened"],
-            'SI.issuetypes'         => ["Bug"],
-            'SI.statuses'           => ["To Do"],
         ],
         'ActualizeQa'                   => [
             'WD.link_type'          => 'Release link',
@@ -120,9 +118,6 @@ $config = [
         'Process'                       => [
             'WD.status'             => 'Ready for testing.php',
             'WD.trans_name'         => 'Need actualization',
-            'SI.status'             => 'Ready for testing.php',
-            'SI.trans_name'         => 'Need actualization',
-
 
             'WDB.status'            => 'Ready for testing.php',
             'WDB.trans_name'        => 'Need actualization',

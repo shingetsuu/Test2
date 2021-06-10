@@ -66,7 +66,7 @@ class TestCommand extends ProcessCommand
                                     'command' => 'test-commit',
                                     'component' => $component,
                                     'commit' => $issueBranch,
-                                    '--return-phpunit-output' => true,
+                                    '--return-phpunit.php-output' => true,
                                 );
 
                                 $testCommitCommandInput = new ArrayInput($args);

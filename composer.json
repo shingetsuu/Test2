@@ -17,7 +17,9 @@
         "symfony/console" : "2.3.*",
         "swiftmailer/swiftmailer" : ">=5.0",
         "kbjr/git.php": "0.1.4.9",
-        "maknz/slack": "^1.7"
+        "maknz/slack": "^1.7",
+      "ext-json": "*",
+      "ext-xdebug": "*"
     },
     "require-dev" : {
         "phpunit/phpunit":"3.7.*"

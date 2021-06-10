@@ -30,7 +30,7 @@ class Client extends \Click2mice\JiraClient\Clients\v5_1_8\Client
                 return false;
             }
         } catch (TransferException $e) {
-            return false;
+            return $e;
         }
     }
 

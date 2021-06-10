@@ -58,7 +58,7 @@ abstract class ProcessCommand extends Command
     {
         if (is_null($this->jiraClient)) {
             $this->jiraClient = Factory::getInstance(
-                '6.3.8',
+                '6.4.1',
                 $this->config['jira.url'],
                 $this->config['jira.username'],
                 $this->config['jira.password']
@@ -263,7 +263,7 @@ abstract class ProcessCommand extends Command
      */
     protected function getIssueBranch($issueKey)
     {
-        $issueData = $this->getJiraClient()->getIssue($issueKey);
+        $issueData = $this->getJiraClient()->getIssue( $issueKey );
         return isset($issueData['fields'][$this->config['jira.fields.git_branch']])
             ? $issueData['fields'][$this->config['jira.fields.git_branch']]
             : (strripos($issueKey, 'WDB') !== false ? 'master' : '');

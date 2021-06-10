@@ -25,10 +25,10 @@ class TestCommitCommand extends ProcessCommand
                 'Хеш коммита, ветка или тег'
             )
             ->addOption(
-                'return-phpunit-output',
+                'return-phpunit.php-output',
                 null,
                 InputOption::VALUE_NONE,
-                'Вывести в output вывод запуска phpunit (разделитель - \n\n)'
+                'Вывести в output вывод запуска phpunit.php (разделитель - \n\n)'
             )
             ->addOption(
                 'coverage-dir',
@@ -103,7 +103,7 @@ class TestCommitCommand extends ProcessCommand
         $isTestsPassed = $this->runUnitTests($repo, $phpunitCommand, $phpunitOutput, $output);
         $output->writeln($isTestsPassed? '<info>tests passed!</info>' : '<error>tests failed</error>');
 
-        if($input->getOption('return-phpunit-output')) {
+        if($input->getOption('return-phpunit.php-output')) {
             $output->writeln("\n\n".$phpunitOutput);
         }
         if (!$this->lockComponent($component, true)) {

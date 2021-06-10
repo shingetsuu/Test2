@@ -49,7 +49,7 @@ $config = [
             'CM.issuetypes'         => ['Development task', 'Bug',"Task"],
             'CM.statuses'           => ["Ready for Release", "Ready for Testing", "Need CodeReview", "In Testing", "Planned to Testing", "Reopened"],
             'SI.issuetypes'         => ['Development task', 'Bug', "Task"],
-            'SI.statuses'           => ["To Do", "In Progress"],
+            'SI.statuses'           => ["Done"],
         ],
         'ActualizeQa'                   => [
             'WD.link_type'          => 'Release link',
@@ -120,6 +120,9 @@ $config = [
         'Process'                       => [
             'WD.status'             => 'Ready for testing.php',
             'WD.trans_name'         => 'Need actualization',
+            'SI.status'             => 'Ready for testing.php',
+            'SI.trans_name'         => 'Need actualization',
+
 
             'WDB.status'            => 'Ready for testing.php',
             'WDB.trans_name'        => 'Need actualization',
@@ -147,6 +150,8 @@ $config = [
         'Test'                          => [
             'WD.issuetypes'         => ['Development task', 'Bug report'],
             'WD.statuses'           => ['Ready for testing.php'],
+            'SI.issuetypes'         => ['Development task', 'Bug', "Task"],
+            'SI.statuses'           => ["To Do", "In Progress"],
             'WD.test_trans_name'    => 'Start testing.php',
             'WD.complete_trans_name'=> 'Complete testing.php (auto)',
             'WD.err_trans_name'     => 'Reopen (auto)',
@@ -163,8 +168,8 @@ $config = [
         'site'                           => [
             'repo_url'        => 'https://github.com/Vortex-V/Test.git',
             'version_mask'    => 'site-%VERSION%',
-//            'phpunit_command' => 'php -d error_reporting=0 data/vendor/bin/phpunit -c data/test/phpunit.xml',
-            'phpunit_command' => 'php -d error_reporting=0 data/vendor/bin/phpunit -c data/test/phpunit.xml',
+//            'phpunit_command' => 'php -d error_reporting=0 vendor/bin/phpunit.php -c test/phpunit.php.xml',
+            'phpunit_command' => 'php -d error_reporting=0 phpunit -c test/phpunit.php.xml',
 //            'jenkins.build'   => 'http://jenkins.lan/job/build-legacy-way-stable/buildWithParameters?version=',
             'jenkins.build'   => '',
 //            'crucible_repo'   => 'legacy-way',

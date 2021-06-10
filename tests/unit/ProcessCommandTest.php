@@ -10,13 +10,13 @@ class ProcessCommandTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $config = array(
-            'jira.default_project' => 'WD',
+            'jira.default_project' => 'SI',
             'components' => array(
                 'test' => array(
 //                    'repo_url' => 'git@git.lan:legacy-way.git',
                     'version_mask' => 'test-%VERSION%',
 //                    'crucible_repo' => 'legacy-way',
-//                    'phpunit_command' => '/usr/bin/php -d error_reporting=0 data/vendor/phpunit/phpunit/phpunit.php -c data/test/common_bootstrap.xml',
+//                    'phpunit_command' => '/usr/bin/php -d error_reporting=0 data/vendor/phpunit.php/phpunit.php/phpunit.php.php -c data/test/common_bootstrap.xml',
                 ),
                 'test2' => array()
             )

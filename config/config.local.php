@@ -7,6 +7,7 @@
 		'crucible.password' => '',
 		'users' => '',
 		'crucible.project_table' => '',
+        'ss'=>'s',
         'commands.options'                          => [
             'Actualize'                     => [
                 'SI.issuetypes'         =>['Bug'],

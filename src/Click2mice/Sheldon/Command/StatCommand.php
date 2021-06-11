@@ -44,7 +44,6 @@ class StatCommand extends ProcessCommand
                 $statValue[$stat] = $issues['total'];
             }
         }
-
         print implode(';', $statValue) . "\n";
     }
 }

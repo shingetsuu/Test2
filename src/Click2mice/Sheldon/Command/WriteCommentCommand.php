@@ -23,17 +23,20 @@ class WriteCommentCommand extends ProcessCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-
+        $project = $this->getProject();
+        $components = $this->config['components'];
         $weekAgo  = date('Y-m-d',strtotime('-7 days')) ;//неделю назад
-        $ticketIssue = $this->getJiraClient()->getIssuesByJql(
-         "project = 'WD' AND updated <= '$weekAgo' AND  status IN ('Ready For Review')");
+        $jql = "project = '$project' AND updated <= '$weekAgo' AND  status IN ('Done')";
+        $output->writeln("\n<info>[JQL] " . $jql . "</info>");
+
+        $ticketIssue = $this->getJiraClient()->getIssuesByJql($jql);
+        $output->writeln(var_dump($ticketIssue));
 
         if (isset($ticketIssue)) {
             foreach($ticketIssue['issues'] as $ticketIssue)
             {
-
                 $ticketIssue = $this->getJiraClient()->getIssue($ticketIssue['key']);
-                $this->getJiraClient()->addIssueComment($ticketIssue['key'],'[~'.$ticketIssue['fields']['assignee']['name'].'], прошу обратить внимание на тикет.');
+                $this->getJiraClient()->addIssueComment($ticketIssue['key'],'[~'.$ticketIssue['fields']['assignee']['name'].'], комментарий.');
             }
         }
 

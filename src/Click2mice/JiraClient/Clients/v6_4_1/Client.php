@@ -61,7 +61,7 @@ class Client extends \Click2mice\JiraClient\Clients\v6_3_8\Client
                 return false;
             }
         } catch (TransferException $e) {
-            return $e;
+            return false;
         }
     }
 
@@ -83,6 +83,38 @@ class Client extends \Click2mice\JiraClient\Clients\v6_3_8\Client
             );
             if ($this->checkStatusCode($result)) {
                 return json_decode($result->getBody(),true);
+            } else {
+                return false;
+            }
+        } catch (TransferException $e) {
+            return false;
+        }
+    }
+
+    /**
+     * Добавляет комментарий к тикету
+     * @param $issueKey
+     * @param $comment
+     * @return mixed
+     */
+    public function addIssueComment( $issueKey, $comment )
+    {
+        try {
+            if (!isset($comment)) {
+                return true;
+            }
+            $authData = base64_encode("$this->username:$this->password");
+            $result = $this->getRestClient()->post(
+                $this->getRestUrl()."issue/$issueKey/comment",
+                [
+                    'json' => [
+                        'body'     => $comment],
+                    'headers' => [
+                        'Authorization' => 'Basic ' . $authData]
+                ]
+            );
+            if ($this->checkStatusCode($result)) {
+                return true;
             } else {
                 return false;
             }

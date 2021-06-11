@@ -38,10 +38,7 @@ class ActualizeCommand extends ProcessCommand
                 . implode("', '", $this->config['commands.options']['Actualize'][$project . ".statuses"]) .
                 "') ORDER BY key ASC";
             $output->writeln("\n<info>[JQL] " . $jql . "</info>");
-            $fields=['issuetype','project','status'];
             $issues = $this->getJiraClient()->getIssuesByJql($jql);
-            $output->writeln(var_dump($issues));
-            $output->writeln('<info>Конец поиска</info>');
             if ( $issues ) {
                 $output->writeln( '<comment> найдено ' . $issues['total'] . '</comment>');
                 if ( $issues['total'] )

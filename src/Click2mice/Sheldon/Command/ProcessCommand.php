@@ -330,7 +330,6 @@ abstract class ProcessCommand extends Command
             $output->writeln( 'OK' );
         } catch ( \Exception $e ) {
             $output->writeln( '<error>error while merging</error>' );
-            $output->writeln(var_dump($e));
             $this->stepBackIssue($project, $issueKey, $issueStatus, $output);
             $this->addUniqueIssueComment( $issueKey, 'Ошибка актуализации бранча тикета: не удалось смержить бранч master в бранч ' . $issueBranch . '. Требуется ручная актуализация.' . "\n\n" . $e->getMessage(), true);
             return false;
